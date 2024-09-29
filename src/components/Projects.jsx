@@ -19,7 +19,9 @@ const Container = styled.div`
 const Title = styled.h2`
   text-align: center;
   margin-bottom: 60px;
-  color: #fff;
+  font-size: 36px;
+  color: #fffcec;
+  font-family: suit;
 `;
 
 const ProjectsGrid = styled.div`
@@ -27,6 +29,8 @@ const ProjectsGrid = styled.div`
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
+  color: #fffcec;
+  font-family: suit;
 `;
 
 const ProjectCard = styled.div`
@@ -49,13 +53,15 @@ const ProjectContent = styled.div`
 
 const ProjectTitle = styled.h3`
   margin-bottom: 15px;
-  color: #fff;
+  color: #fffcec;
+  font-family: suit;
 `;
 
 const ProjectDescription = styled.p`
   font-size: 16px;
   line-height: 1.5;
-  color: #ccc;
+  color: #fffcec;
+  font-family: suit;
 `;
 
 function Projects() {
@@ -68,15 +74,36 @@ function Projects() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          프로젝트
+          PROJECTS
         </Title>
         <ProjectsGrid>
           <ProjectCard as={motion.div} whileHover={{ scale: 1.05 }}>
-            <ProjectImage src="/images/project1.jpg" alt="프로젝트 이미지" />
+            <ProjectImage src="/images/cap.png" alt="프로젝트 이미지" />
             <ProjectContent>
-              <ProjectTitle>프로젝트 제목 1</ProjectTitle>
+              <ProjectTitle>얘들아 나 졸업해!</ProjectTitle>
               <ProjectDescription>
-                프로젝트 설명을 여기에 작성하세요.
+                졸업 사진 롤링페이퍼 웹 서비스
+              </ProjectDescription>
+            </ProjectContent>
+          </ProjectCard>
+          <ProjectCard as={motion.div} whileHover={{ scale: 1.05 }}>
+            <ProjectImage
+              src="/images/all_clear_logo.png"
+              alt="프로젝트 이미지"
+            />
+            <ProjectContent>
+              <ProjectTitle>ALL Clear</ProjectTitle>
+              <ProjectDescription>
+                Ondevice-AI를 활용한 스마트팜 구현 프로젝트
+              </ProjectDescription>
+            </ProjectContent>
+          </ProjectCard>
+          <ProjectCard as={motion.div} whileHover={{ scale: 1.05 }}>
+            <ProjectImage src="/images/han_logo.png" alt="프로젝트 이미지" />
+            <ProjectContent>
+              <ProjectTitle>한솥밥</ProjectTitle>
+              <ProjectDescription>
+                공유냉장고 활성화를 위한 프로젝트
               </ProjectDescription>
             </ProjectContent>
           </ProjectCard>
