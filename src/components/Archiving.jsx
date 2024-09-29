@@ -59,7 +59,7 @@ function Archiving() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          Archiving
+          🔗 ARCHIVING
         </Title>
         <LinksWrapper>
           <LinkCard

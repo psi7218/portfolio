@@ -9,20 +9,6 @@ const FooterSection = styled.footer`
   text-align: center;
 `;
 
-const SocialLinks = styled.div`
-  margin-top: 10px;
-`;
-
-const SocialLink = styled.a`
-  color: #fff;
-  margin: 0 10px;
-  font-size: 24px;
-
-  &:hover {
-    color: #007bff;
-  }
-`;
-
 function Footer() {
   return (
     <FooterSection>

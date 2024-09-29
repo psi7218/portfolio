@@ -7,19 +7,15 @@ import {
   FaDocker,
   FaAws,
   FaPython,
-  FaNodeJs,
   FaJava,
 } from "react-icons/fa"; // 필요한 아이콘 임포트
 import {
   SiTypescript,
-  SiRedux,
-  SiExpress,
   SiMongodb,
   SiMysql,
   SiRecoil,
   SiStyledcomponents,
   SiSpringboot,
-  SiSpring,
 } from "react-icons/si";
 
 const SkillsSection = styled.section`
@@ -125,7 +121,7 @@ function Skills() {
   return (
     <SkillsSection id="skills">
       <Container>
-        <Title>Skills</Title>
+        <Title>✍ SKILLS</Title>
         {skillCategories.map((category, index) => (
           <CategoryContainer key={index}>
             <CategoryTitle>{category.category}</CategoryTitle>

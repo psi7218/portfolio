@@ -4,11 +4,10 @@ import styled from "styled-components";
 import { Link } from "react-scroll";
 import {
   FaHome,
-  FaUser,
   FaLaptopCode,
   FaFolderOpen,
   FaArchive,
-  FaEnvelope,
+  FaMedal,
 } from "react-icons/fa";
 
 const SidebarContainer = styled.div`
@@ -67,6 +66,12 @@ function Sidebar() {
           <SidebarLink to="home" smooth={true} duration={500}>
             <FaHome />
             <span>Home</span>
+          </SidebarLink>
+        </SidebarItem>
+        <SidebarItem>
+          <SidebarLink to="education" smooth={true} duration={500}>
+            <FaMedal />
+            <span>Edu/Cert</span>
           </SidebarLink>
         </SidebarItem>
         <SidebarItem>

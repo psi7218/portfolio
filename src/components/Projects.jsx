@@ -2,6 +2,7 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const ProjectsSection = styled.section`
   padding: 100px 0;
@@ -38,6 +39,7 @@ const ProjectCard = styled.div`
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 `;
 
 const ProjectImage = styled.img`
@@ -65,6 +67,10 @@ const ProjectDescription = styled.p`
 `;
 
 function Projects() {
+  const navigate = useNavigate();
+  const MovetoProject = (projectname) => {
+    navigate(`/projects/${projectname}`);
+  };
   return (
     <ProjectsSection id="projects">
       <Container>
@@ -74,10 +80,14 @@ function Projects() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          PROJECTS
+          📙 PROJECTS
         </Title>
         <ProjectsGrid>
-          <ProjectCard as={motion.div} whileHover={{ scale: 1.05 }}>
+          <ProjectCard
+            as={motion.div}
+            whileHover={{ scale: 1.05 }}
+            onClick={() => MovetoProject("Congraduation")}
+          >
             <ProjectImage src="/images/cap.png" alt="프로젝트 이미지" />
             <ProjectContent>
               <ProjectTitle>얘들아 나 졸업해!</ProjectTitle>

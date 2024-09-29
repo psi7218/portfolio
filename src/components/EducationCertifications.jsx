@@ -74,11 +74,11 @@ function EducationCertifications() {
   const certificationsData = [
     {
       title: "SQLD",
-      date: "2020년 5월",
+      date: "2023. 12",
     },
     {
       title: "OPIC IM1",
-      date: "2021년",
+      date: "2023. 09",
     },
     // 추가 자격증 사항
   ];
