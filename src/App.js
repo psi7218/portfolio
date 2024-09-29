@@ -5,9 +5,10 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Home from "./components/Home";
 import About from "./components/About";
-import Skills from "./components/Skills"; // 추가
+import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-import Archiving from "./components/Archiving"; // 추가
+import Archiving from "./components/Archiving";
+import EducationCertifications from "./components/EducationCertifications";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import styled from "styled-components";
@@ -39,9 +40,10 @@ function App() {
         <MainContent>
           <Home />
           {/* <About /> */}
-          <Skills /> {/* 추가 */}
+          <EducationCertifications />
+          <Skills />
           <Projects />
-          <Archiving /> {/* 추가 */}
+          <Archiving />
           {/* <Contact /> */}
           <Footer />
         </MainContent>

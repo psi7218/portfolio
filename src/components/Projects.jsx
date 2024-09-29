@@ -5,8 +5,10 @@ import { motion } from "framer-motion";
 
 const ProjectsSection = styled.section`
   padding: 100px 0;
-  background-color: #000; /* 배경색을 검은색으로 설정 */
-  color: #fff; /* 텍스트 색상을 흰색으로 설정 */
+  background-color: #000;
+  color: #fffcec;
+  font-family: suit;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
 `;
 
 const Container = styled.div`

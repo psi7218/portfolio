@@ -14,14 +14,15 @@ import {
 const SidebarContainer = styled.div`
   width: 80px;
   height: 100vh;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   background-color: #000;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 0px;
 
   z-index: 1000;
 

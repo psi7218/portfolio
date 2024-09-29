@@ -33,25 +33,24 @@ const IntroPhraseContainer = styled.div`
   }
 `;
 
-const IntroPhraseLine = styled.p`
-  font-size: 24px;
+const IntroPhraseLine = styled.h1`
+  font-size: 48px;
   margin: 0;
   color: #fffcec;
   font-family: suit;
   font-weight: 700;
+  line-height: 1.2;
 
-  &:first-child {
-    text-align: left;
-    padding-left: 200px;
-  }
+  //   &:first-child {
+  //     text-align: center;
+  //   }
 
-  &:last-child {
-    text-align: right;
-    padding-right: 200px;
-  }
+  //   &:last-child {
+  //     text-align: center;
+  //   }
 
   @media (max-width: 768px) {
-    text-align: center;
+    font-size: 36px;
   }
 `;
 
@@ -65,7 +64,7 @@ const Container = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 100px;
   }
 `;
 
@@ -100,8 +99,9 @@ const InfoItem = styled.p`
 `;
 
 const IntroText = styled.p`
-  font-size: 16px;
+  font-size: 18px;
   margin-top: 20px;
+  line-height: 1.5;
 `;
 
 function Home() {
@@ -109,20 +109,20 @@ function Home() {
     <HomeSection id="home">
       <IntroPhraseContainer>
         <IntroPhraseLine
-          as={motion.p}
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+          as={motion.h1}
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          복잡한 문제를 해결하는 즐거움을 알고
+          SEONG-IN
         </IntroPhraseLine>
         <IntroPhraseLine
-          as={motion.p}
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
+          as={motion.h1}
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.2 }}
         >
-          그 여정을 기록하며 함께 성장하는 개발자 지망생
+          PORTFOLIO
         </IntroPhraseLine>
       </IntroPhraseContainer>
       <Container>
@@ -130,20 +130,23 @@ function Home() {
           src="/images/mypic.jpg"
           alt="프로필 사진"
           as={motion.img}
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1 }}
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
         />
         <InfoWrapper
           as={motion.div}
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1 }}
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
         >
           <NameTitle>박성인</NameTitle>
           <InfoItem>1996. 07. 17</InfoItem>
           <InfoItem>Frontend Developer</InfoItem>
-          <IntroText>간단한 자기소개 문구</IntroText>
+          <IntroText>
+            복잡한 문제를 해결하는 즐거움을 알고
+            <br />그 여정을 기록하며 성장하는 개발자 지망생
+          </IntroText>
         </InfoWrapper>
       </Container>
     </HomeSection>

@@ -7,7 +7,9 @@ import { FaGithub, FaBlogger } from "react-icons/fa";
 const ArchivingSection = styled.section`
   padding: 100px 0;
   background-color: #000;
-  color: #fff;
+  color: #fffcec;
+  font-family: suit;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
 `;
 
 const Container = styled.div`
