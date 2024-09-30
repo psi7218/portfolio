@@ -80,7 +80,7 @@ function Projects() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          📙 PROJECTS
+          📂 PROJECTS
         </Title>
         <ProjectsGrid>
           <ProjectCard

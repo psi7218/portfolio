@@ -257,14 +257,16 @@ function Congraduation() {
 
         <Subtitle>주요 기능</Subtitle>
 
-        <Subtitle>🎓 졸업 사진 업로드 및다운로드</Subtitle>
+        <Subtitle>🎓 졸업 사진 업로드 및 다운로드</Subtitle>
         <ContentRow>
           <Image src="/images/gif1.gif" alt="졸업 사진 업로드 GIF" />
           <Image src="/images/gif2.gif" alt="졸업 사진 다운로드 GIF" />
           <TextDescription>
-            사용자는 졸업 사진을 업로드하고 롤링 페이퍼에 공유할 수 있습니다.
-            사진은 즉시 업로드되며, 각 친구들이 남긴 메시지와 함께 졸업을
-            기념하는 기능입니다.
+            <p>💡사용자는 졸업 사진을 업로드하고 롤링 페이퍼에 공유</p>
+            <p>
+              💡사진은 즉시 업로드되며, 각 친구들이 남긴 메시지와 함께 졸업을
+              기념
+            </p>
           </TextDescription>
         </ContentRow>
 
@@ -273,13 +275,16 @@ function Congraduation() {
           <Image src="/images/gif3.png" alt="메시지 작성 GIF" />
           <Image src="/images/gif4.gif" alt="메시지 작성 GIF" />
           <TextDescription>
-            친구들이 작성한 메시지를 확인하고, 새롭게 메시지를 남길 수 있는
-            기능을 제공합니다. 작성된 메시지는 실시간으로 반영되어 롤링 페이퍼에
-            기록됩니다.
+            <p>
+              💡친구들이 작성한 메시지를 확인하고, 새롭게 메시지를 남길 수 있는
+              기능을 제공
+            </p>
+
+            <p>💡작성된 메시지는 실시간으로 반영되어 롤링 페이퍼에 기록</p>
           </TextDescription>
         </ContentRow>
 
-        <Subtitle>🚀 문제 해결 과정</Subtitle>
+        <Subtitle>🚀 성능 개선 과정</Subtitle>
         <Description>
           <p>❌ 고해상도 이미지 업로드로 인한 서버 부하</p>
 
@@ -298,7 +303,11 @@ function Congraduation() {
           <p>⚪️ 2주간 웹서비스 운영과 사용자 모집 등 온라인 이벤트 발생 </p>
           <p>⚪️ 총 340명의 실 사용자 유치</p>
           <p>⚪️ SSAFY 10기에서 가장 빠른 배포 작업 진행</p>
+          <p>⚪️ 사용자 피드백을 반영한 7번의 디벨롭 과정</p>
         </Description>
+
+        <Subtitle>📄 회고</Subtitle>
+        <Description></Description>
       </Container>
     </ProjectDetailSection>
   );

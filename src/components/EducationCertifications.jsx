@@ -68,6 +68,10 @@ function EducationCertifications() {
       institution: "SSAFY",
       period: "2023.07 - 2024.06",
     },
+    {
+      institution: "AKIAKA 일경험 인턴",
+      period: "2024.09 ~ 진행중",
+    },
     // 추가 학력 사항
   ];
 
