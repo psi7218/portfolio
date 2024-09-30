@@ -1,4 +1,3 @@
-// components/Projects.js
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
@@ -25,6 +24,14 @@ const Title = styled.h2`
   font-family: suit;
 `;
 
+const SectionTitle = styled.h3`
+  text-align: left;
+  margin-bottom: 40px;
+  font-size: 28px;
+  color: #fffcec;
+  font-family: suit;
+`;
+
 const ProjectsGrid = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -36,10 +43,13 @@ const ProjectsGrid = styled.div`
 
 const ProjectCard = styled.div`
   width: 300px;
+  height: 400px; /* 카드의 고정된 높이 */
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
 `;
 
 const ProjectImage = styled.img`
@@ -50,11 +60,12 @@ const ProjectImage = styled.img`
 
 const ProjectContent = styled.div`
   padding: 20px;
-  background-color: #111; /* 카드 배경색 어둡게 */
+  background-color: #111;
+  flex: 1; /* 나머지 공간을 채우도록 설정 */
 `;
 
 const ProjectTitle = styled.h3`
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: #fffcec;
   font-family: suit;
 `;
@@ -64,6 +75,11 @@ const ProjectDescription = styled.p`
   line-height: 1.5;
   color: #fffcec;
   font-family: suit;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* 최대 3줄까지 표시 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; /* 말줄임표 적용 */
 `;
 
 function Projects() {
@@ -82,6 +98,9 @@ function Projects() {
         >
           📂 PROJECTS
         </Title>
+
+        {/* SSAFY Projects Section */}
+        <SectionTitle>SSAFY Projects</SectionTitle>
         <ProjectsGrid>
           <ProjectCard
             as={motion.div}
@@ -117,7 +136,23 @@ function Projects() {
               </ProjectDescription>
             </ProjectContent>
           </ProjectCard>
-          {/* 추가 프로젝트 카드 */}
+        </ProjectsGrid>
+
+        {/* Solo Projects Section */}
+        <SectionTitle>Solo Projects</SectionTitle>
+        <ProjectsGrid>
+          <ProjectCard as={motion.div} whileHover={{ scale: 1.05 }}>
+            <ProjectImage
+              src="/images/solo_project_image.png"
+              alt="프로젝트 이미지"
+            />
+            <ProjectContent>
+              <ProjectTitle>개인 프로젝트 1</ProjectTitle>
+              <ProjectDescription>
+                개인 프로젝트 설명을 여기에 추가하세요.
+              </ProjectDescription>
+            </ProjectContent>
+          </ProjectCard>
         </ProjectsGrid>
       </Container>
     </ProjectsSection>

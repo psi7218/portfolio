@@ -9,11 +9,14 @@ import Archiving from "./components/Archiving";
 import EducationCertifications from "./components/EducationCertifications";
 import Footer from "./components/Footer";
 import Congraduation from "./components/Projects/Congraduation";
+import ScrollToTop from "./components/ScrollToTop";
+import Test from "./components/Test";
 
 function App() {
   return (
     <Router>
       <GlobalStyle />
+      <ScrollToTop />
       <Routes>
         <Route
           path="/"
@@ -21,9 +24,10 @@ function App() {
             <Layout>
               <Home />
               <EducationCertifications />
+
               <Skills />
               <Projects />
-              <Archiving />
+
               <Footer />
             </Layout>
           }

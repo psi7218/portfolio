@@ -86,12 +86,6 @@ function Sidebar() {
             <span>Projects</span>
           </SidebarLink>
         </SidebarItem>
-        <SidebarItem>
-          <SidebarLink to="archiving" smooth={true} duration={500}>
-            <FaArchive />
-            <span>Archiving</span>
-          </SidebarLink>
-        </SidebarItem>
       </SidebarMenu>
     </SidebarContainer>
   );
