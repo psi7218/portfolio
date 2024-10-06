@@ -7,9 +7,16 @@ import {
   FaJava,
   FaDocker,
   FaJenkins,
-} from "react-icons/fa"; // react-icons 사용
-import { SiStyledcomponents, SiMongodb, SiSpring } from "react-icons/si";
-
+} from "react-icons/fa";
+import {
+  SiStyledcomponents,
+  SiMongodb,
+  SiSpring,
+  SiRecoil,
+  SiMui,
+} from "react-icons/si";
+import { motion } from "framer-motion";
+import TechCard from "./TechCard";
 const ProjectDetailSection = styled.section`
   padding: 100px 0;
   background-color: #000;
@@ -41,7 +48,6 @@ const Description = styled.p`
   margin-bottom: 40px;
   text-indent: 40px;
 `;
-
 const IconContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -50,53 +56,25 @@ const IconContainer = styled.div`
   margin-bottom: 40px;
 `;
 
-// 각 기술 아이콘 스타일
-const TechCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 120px;
-  padding: 20px;
-  background-color: #111;
-  border-radius: 10px;
-  color: #fff;
-  text-align: center;
-`;
-
-const Icon = styled.div`
-  font-size: 50px;
-  margin-bottom: 10px;
-`;
-
-const TechName = styled.h4`
-  font-size: 18px;
-  margin: 0;
-  color: #fffcec;
-`;
-
-const Version = styled.span`
-  font-size: 14px;
-  color: #aaa;
-`;
-
 const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
-  gap: 20px; /* 이미지 사이 간격 조절 */
+  gap: 20px;
   margin: 40px 0;
 `;
 
 const Image = styled.img`
-  width: 300px; /* 이미지 크기 조절 */
+  width: 300px;
   height: 450px;
   border-radius: 10px;
   object-fit: contain;
 `;
+
 const ContentRow = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* 요소 간의 간격 */
+  gap: 20px;
   margin: 40px 0;
 `;
 
@@ -111,6 +89,7 @@ const TextDescription = styled.div`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: justify;
 `;
+
 const Center = styled.div`
   justify-content: center;
   text-align: center;
@@ -129,7 +108,6 @@ const LinkItem = styled.a`
   display: flex;
   align-items: center;
   gap: 8px;
-
   &:hover {
     text-decoration: underline;
   }
@@ -170,89 +148,50 @@ function Congraduation() {
               메시지를 주고받을 수 있는 롤링 페이퍼 웹 서비스입니다.{" "}
             </p>
             <p>
-              사용자는 졸업 사진을 업로드하고, 친구들이 남긴 메시지를 통해
-              졸업을 축하받을 수 있습니다.
+              사용자는 졸업 사진을 업로드하고, 친구들이 작성한 축하 메시지를
+              받을 수 있습니다.
+              <p>
+                이를 통해 졸업생들은 자신만의 추억을 디지털 형식으로 간직할 수
+                있게 됩니다.
+              </p>
             </p>
             <p>
-              본 프로젝트는 사용자 친화적인 인터페이스를 제공하고, 다양한 사용자
-              피드백을 반영하여 총 7번의 업데이트를 통해 개선되었습니다.
+              사용자 친화적인 인터페이스와 소셜 기능을 통해 쉽게 졸업을 기념하고
+              친구들과의 유대감을 강화하는 것이 주요 목표였습니다.
             </p>
           </Description>
         </Center>
 
-        <Subtitle>사용 기술 스택</Subtitle>
+        <Subtitle>기술 스택 및 선정 이유</Subtitle>
         <IconContainer>
-          <TechCard>
-            <Icon style={{ color: "#61DBFB" }}>
-              <FaReact />
-            </Icon>
-            <TechName>React</TechName>
-            <Version>v18.2</Version>
-          </TechCard>
-
-          <TechCard>
-            <Icon style={{ color: "#68A063" }}>
-              <FaNodeJs />
-            </Icon>
-            <TechName>Node.js</TechName>
-            <Version>v20.10.0</Version>
-          </TechCard>
-
-          <TechCard>
-            <Icon style={{ color: "#007FFF" }}>
-              <SiMongodb />
-            </Icon>
-            <TechName>MUI</TechName>
-            <Version>-</Version>
-          </TechCard>
-
-          <TechCard>
-            <Icon style={{ color: "#f24e1e" }}>
-              <SiStyledcomponents />
-            </Icon>
-            <TechName>Recoil</TechName>
-            <Version>v0.7.7</Version>
-          </TechCard>
-
-          <TechCard>
-            <Icon style={{ color: "#F7DF1E" }}>
-              <FaJava />
-            </Icon>
-            <TechName>Java</TechName>
-            <Version>jdk 17.0.9</Version>
-          </TechCard>
-
-          <TechCard>
-            <Icon style={{ color: "#6DB33F" }}>
-              <SiSpring />
-            </Icon>
-            <TechName>Spring Boot</TechName>
-            <Version>v3.2</Version>
-          </TechCard>
-
-          <TechCard>
-            <Icon style={{ color: "#FFCA28" }}>
-              <FaDatabase />
-            </Icon>
-            <TechName>MySQL</TechName>
-            <Version>v8.0.34</Version>
-          </TechCard>
-
-          <TechCard>
-            <Icon style={{ color: "#2496ED" }}>
-              <FaDocker />
-            </Icon>
-            <TechName>Docker</TechName>
-            <Version>-</Version>
-          </TechCard>
-
-          <TechCard>
-            <Icon style={{ color: "#D24939" }}>
-              <FaJenkins />
-            </Icon>
-            <TechName>Jenkins</TechName>
-            <Version>-</Version>
-          </TechCard>
+          <TechCard
+            icon={<FaReact />}
+            iconColor="#61DBFB"
+            techName="React"
+            version="v18.2"
+            reason="컴포넌트 기반의 UI 라이브러리로, 재사용성과 유지보수성을 높이기 위해 선택했습니다."
+          />
+          <TechCard
+            icon={<FaNodeJs />}
+            iconColor="#68A063"
+            techName="Node.js"
+            version="v20.10.0"
+            reason="서버 사이드 개발을 위해 사용하였으며, JavaScript로 풀스택 개발이 가능하도록 선택했습니다."
+          />
+          <TechCard
+            icon={<SiMui />}
+            iconColor="#007FFF"
+            techName="MUI"
+            version="-"
+            reason="React를 위한 Material Design 기반의 UI 라이브러리로, 빠른 UI 구성과 일관성 있는 디자인을 위해 선택했습니다."
+          />
+          <TechCard
+            icon={<SiRecoil />}
+            iconColor="#f24e1e"
+            techName="Recoil"
+            version="v0.7.7"
+            reason="React 애플리케이션의 전역 상태 관리를 위해 선택했습니다."
+          />
         </IconContainer>
 
         <Subtitle>주요 기능</Subtitle>
@@ -262,10 +201,14 @@ function Congraduation() {
           <Image src="/images/gif1.gif" alt="졸업 사진 업로드 GIF" />
           <Image src="/images/gif2.gif" alt="졸업 사진 다운로드 GIF" />
           <TextDescription>
-            <p>💡사용자는 졸업 사진을 업로드하고 롤링 페이퍼에 공유</p>
             <p>
-              💡사진은 즉시 업로드되며, 각 친구들이 남긴 메시지와 함께 졸업을
-              기념
+              💡 사용자가 졸업 사진을 업로드하고 다운로드할 수 있는 기능입니다.
+              이를 통해 사용자는 자신의 졸업 순간을 디지털 형식으로 간직할 수
+              있습니다.
+            </p>
+            <p>
+              💡 사진 업로드 과정에서 클라이언트 측에서 이미지 리사이징을 하여
+              서버의 부하를 줄이고 업로드 속도를 향상시켰습니다.
             </p>
           </TextDescription>
         </ContentRow>
@@ -276,38 +219,58 @@ function Congraduation() {
           <Image src="/images/gif4.gif" alt="메시지 작성 GIF" />
           <TextDescription>
             <p>
-              💡친구들이 작성한 메시지를 확인하고, 새롭게 메시지를 남길 수 있는
-              기능을 제공
+              💡 사용자는 Kakao 소셜 로그인을 통해 쉽게 계정을 생성하고 서비스를
+              이용할 수 있습니다. 또한, 친구들과 졸업 메시지를 공유할 수 있는
+              기능을 제공하여 사용자 간의 상호작용을 극대화했습니다.
             </p>
-
-            <p>💡작성된 메시지는 실시간으로 반영되어 롤링 페이퍼에 기록</p>
+            <p>
+              💡 작성된 메시지는 실시간으로 반영되어 롤링 페이퍼에 기록되며,
+              사용자 경험을 높이는 데 기여했습니다.
+            </p>
           </TextDescription>
         </ContentRow>
 
         <Subtitle>🚀 성능 개선 과정</Subtitle>
         <Description>
-          <p>❌ 고해상도 이미지 업로드로 인한 서버 부하</p>
-
           <p>
-            🔧 Client측 Canvas API를 사용하여 이미지 리사이징을 통해 파일 크기
-            축소
+            ❌ 초기에는 고해상도 이미지 업로드로 인해 서버에 부하가
+            발생하였습니다.
           </p>
 
           <p>
-            📌 사진 업로드 시간이 약 27% 향상 , 또한 서버 부하를 줄일 수 있었음
+            🔧 이를 해결하기 위해 클라이언트 측에서 이미지 리사이징을 진행하여
+            파일 크기를 줄였습니다.
+          </p>
+
+          <p>
+            📌 이 과정에서 Canvas API를 사용하였으며, 이를 통해 사진 업로드
+            시간이 약 27% 향상되고 서버 부하를 크게 줄일 수 있었습니다.
           </p>
         </Description>
 
         <Subtitle>🏆 성과</Subtitle>
         <Description>
-          <p>⚪️ 2주간 웹서비스 운영과 사용자 모집 등 온라인 이벤트 발생 </p>
-          <p>⚪️ 총 340명의 실 사용자 유치</p>
-          <p>⚪️ SSAFY 10기에서 가장 빠른 배포 작업 진행</p>
-          <p>⚪️ 사용자 피드백을 반영한 7번의 디벨롭 과정</p>
+          <p>
+            ⚪️ 2주간 웹서비스 운영과 사용자 모집 등 온라인 이벤트를
+            진행했습니다.
+          </p>
+          <p>⚪️ 총 340명의 실 사용자 유치에 성공했습니다.</p>
+          <p>⚪️ SSAFY 10기에서 가장 빠르게 배포 작업을 완료했습니다.</p>
+          <p>
+            ⚪️ 사용자 피드백을 반영한 7번의 업데이트를 통해 서비스 개선을
+            이루었습니다.
+          </p>
         </Description>
 
         <Subtitle>📄 회고</Subtitle>
-        <Description></Description>
+        <Description>
+          <p>
+            본 프로젝트를 통해 사용자 경험을 중심으로 한 서비스 개선의 중요성을
+            깨달았습니다. 또한, 이미지 처리와 최적화를 통해 성능 개선을 이루며
+            클라이언트와 서버 간의 효율적인 통신 방식을 구현하는 데 많은 배움을
+            얻었습니다.
+          </p>
+        </Description>
       </Container>
     </ProjectDetailSection>
   );
