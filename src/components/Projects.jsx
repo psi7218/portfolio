@@ -87,6 +87,11 @@ function Projects() {
   const MovetoProject = (projectname) => {
     navigate(`/projects/${projectname}`);
   };
+
+  const MovetoToyProjectTest = (num) => {
+    window.location.href = `http://localhost:${num}`;
+  };
+
   return (
     <ProjectsSection id="projects">
       <Container>
@@ -115,7 +120,11 @@ function Projects() {
               </ProjectDescription>
             </ProjectContent>
           </ProjectCard>
-          <ProjectCard as={motion.div} whileHover={{ scale: 1.05 }}>
+          <ProjectCard
+            as={motion.div}
+            whileHover={{ scale: 1.05 }}
+            onClick={() => MovetoProject("Allclear")}
+          >
             <ProjectImage
               src="/images/all_clear_logo.png"
               alt="프로젝트 이미지"
@@ -127,7 +136,11 @@ function Projects() {
               </ProjectDescription>
             </ProjectContent>
           </ProjectCard>
-          <ProjectCard as={motion.div} whileHover={{ scale: 1.05 }}>
+          <ProjectCard
+            as={motion.div}
+            whileHover={{ scale: 1.05 }}
+            onClick={() => MovetoProject("Hansotbab")}
+          >
             <ProjectImage src="/images/han_logo.png" alt="프로젝트 이미지" />
             <ProjectContent>
               <ProjectTitle>한솥밥</ProjectTitle>
@@ -138,10 +151,13 @@ function Projects() {
           </ProjectCard>
         </ProjectsGrid>
 
-        {/* Solo Projects Section */}
         <SectionTitle>Solo Projects</SectionTitle>
         <ProjectsGrid>
-          <ProjectCard as={motion.div} whileHover={{ scale: 1.05 }}>
+          <ProjectCard
+            as={motion.div}
+            whileHover={{ scale: 1.05 }}
+            onClick={() => MovetoToyProjectTest(3000)}
+          >
             <ProjectImage
               src="/images/solo_project_image.png"
               alt="프로젝트 이미지"

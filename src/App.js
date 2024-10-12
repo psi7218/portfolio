@@ -5,12 +5,12 @@ import Layout from "./components/Layout";
 import Home from "./components/Home";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-import Archiving from "./components/Archiving";
 import EducationCertifications from "./components/EducationCertifications";
 import Footer from "./components/Footer";
 import Congraduation from "./components/Projects/Congraduation";
 import ScrollToTop from "./components/ScrollToTop";
-import Test from "./components/Test";
+import Allclear from "./components/Projects/Allclear";
+import Hansotbab from "./components/Projects/Hansotbab";
 
 function App() {
   return (
@@ -40,7 +40,22 @@ function App() {
             </Layout>
           }
         />
-        {/* 다른 라우트들을 필요에 따라 추가하세요 */}
+        <Route
+          path="/projects/allclear"
+          element={
+            <Layout hideSidebar>
+              <Allclear />
+            </Layout>
+          }
+        />
+        <Route
+          path="/projects/hansotbab"
+          element={
+            <Layout hideSidebar>
+              <Hansotbab />
+            </Layout>
+          }
+        />
       </Routes>
     </Router>
   );
